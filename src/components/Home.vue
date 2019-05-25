@@ -1,13 +1,14 @@
 <template>
-    <div>
-        <div>
-        Home
-        </div>
-        <div>
+    <div class="row jumbotron text-center">
+        <h1>Página Principal</h1>
+        <div class="row">
         <input type="button" value="Boton" v-on:click="boton()" />
         </div>
     </div>
 </template>
+<style>
+
+</style>
 <script>
 import Vue from 'vue';
 import axios from 'axios';
