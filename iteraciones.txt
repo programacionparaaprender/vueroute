@@ -1,4 +1,7 @@
 
 
-
+Vue Routes
 https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-routing-in-vuejs/
+
+Vue Axios
+https://www.npmjs.com/package/vue-axios
