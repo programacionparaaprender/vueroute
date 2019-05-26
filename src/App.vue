@@ -1,24 +1,35 @@
 <template>
-<center>
-  <div id="app">
-    <div></div>
-    
-        <div class="row">
-            <div class="col-30-px">
-
-              <div class="row"><router-link class="boton" to='/'>Home</router-link></div>
-              <div class="row"><router-link class="boton" to='/register'>Register</router-link></div>
-              <div class="row"><router-link class="boton" to='/login'>Login</router-link></div>
-            </div>
-            <div class="col-70-px">
-                <router-view />
-            </div>
-        </div>
+<div class="container">
       
+<div></div>
+
+    <header-nav :webtitle="website"></header-nav>
+    
+        <contents></contents>
+
+      <footer-nav></footer-nav>
+
     </div>
-  </center>
 </template>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<script>
+import Header from './components/layouts/Header.vue';
+import Footer from './components/layouts/Footer.vue';
+import Contents from './components/Contents.vue';
+
+export default{
+    components:{
+      'header-nav':Header,
+      'footer-nav':Footer,
+      'contents':Contents
+    },
+    data(){
+      return {
+        website:'Ejemplo'
+      };
+    }
+}
+</script>
+
 <style>
 /*<div class="row"></div>*/
 #app
@@ -47,11 +58,13 @@
             color:white;
             background-color:blue;
         }
+        /*
         .row
         {
             float:left;
             width:100%;
         }
+        */
         .col-20-px
         {
             float:left;
@@ -73,7 +86,3 @@
             width:80%;
         }
 </style>
-<script>
-export default {
-}
-</script>
