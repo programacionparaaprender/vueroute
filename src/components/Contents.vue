@@ -1,29 +1,29 @@
 <template>
 <div>
-    <div class="jumbotron">
-            <div class="row">
-              <div class="col-sm-3">
+
+  <banner>
+    <!-- por el slot se sustituye lo anterior tengo entendido -->
+    <!--
+    <p>
+      Bienvenido a Programación para aprender
+    </p>
+    <button class="btn" style="background-color:white;">Continuar</button>-->
+  </banner>
+
+            <div class="row marketing">
+              <div class="col-lg-3">
 
               <div class="row"><router-link class="boton" to='/'>Home</router-link></div>
               <div class="row"><router-link class="boton" to='/register'>Register</router-link></div>
               <div class="row"><router-link class="boton" to='/login'>Login</router-link></div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-lg-9">
                 <router-view />
             </div>
 
             </div>
             
-        </div>
-      
-    
-
-
-      <div class="jumbotron">
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
+        
 
       <div class="row marketing">
         <div class="col-lg-6">
@@ -50,9 +50,20 @@
       </div>
 </div>
 </template>
+<script>
+import Banner from './Banner.vue';
+
+export default{
+    components:{
+      'banner':Banner
+    },
+    data(){
+      return {
+        website:'Ejemplo'
+      };
+    }
+}
+</script>
 <style>
 
 </style>
-<script>
-
-</script>
