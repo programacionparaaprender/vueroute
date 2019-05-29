@@ -2,6 +2,10 @@
 <div>
 
   <banner>
+    <!-- Reemplaza al anterior -->
+    <p slot="title">
+      Bienvenido a Programación para aprender
+    </p>
     <!-- por el slot se sustituye lo anterior tengo entendido -->
     <!--
     <p>
