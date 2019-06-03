@@ -2,10 +2,11 @@
 <div>
 
   <banner>
+    
+        <p slot-scope="name">{{name.text}}</p>
+    
     <!-- Reemplaza al anterior -->
-    <p slot="title">
-      Bienvenido a Programación para aprender
-    </p>
+    
     <!-- por el slot se sustituye lo anterior tengo entendido -->
     <!--
     <p>
@@ -14,18 +15,7 @@
     <button class="btn" style="background-color:white;">Continuar</button>-->
   </banner>
 
-            <div class="row marketing">
-              <div class="col-lg-3">
-
-              <div class="row"><router-link class="boton" to='/'>Home</router-link></div>
-              <div class="row"><router-link class="boton" to='/register'>Register</router-link></div>
-              <div class="row"><router-link class="boton" to='/login'>Login</router-link></div>
-            </div>
-            <div class="col-lg-9">
-                <router-view />
-            </div>
-
-            </div>
+            
             
         
 

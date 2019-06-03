@@ -5,7 +5,17 @@
 
     <header-nav :webtitle="website"></header-nav>
     
-        <contents></contents>
+      <!--  <contents></contents> 
+      <div class="row"><router-link class="boton" to='/'>Home</router-link></div>
+              <div class="row"><router-link class="boton" to='/register'>Register</router-link></div>
+              <div class="row"><router-link class="boton" to='/login'>Login</router-link></div>
+      -->
+
+            <div>
+                <router-view />
+            </div>
+
+            
 
       <footer-nav></footer-nav>
 
@@ -14,13 +24,13 @@
 <script>
 import Header from './components/layouts/Header.vue';
 import Footer from './components/layouts/Footer.vue';
-import Contents from './components/Contents.vue';
+//import Contents from './components/Contents.vue';
 
 export default{
     components:{
       'header-nav':Header,
       'footer-nav':Footer,
-      'contents':Contents
+      //'contents':Contents
     },
     data(){
       return {
