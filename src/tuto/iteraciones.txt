@@ -11,8 +11,14 @@ https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-r
 Vue Axios
 https://www.npmjs.com/package/vue-axios
 
+Tree
+https://github.com/zdy1988/vue-jstree
+
 vue init simple-webpack VueWebPack
 scss No
-
+Necesario para el Login.vue
+//npm install sass-loader --save-dev
 npm install vue-router --save
 npm install --save axios vue-axios
+npm install --save axios vue-axios
+npm install --save vue-jstree

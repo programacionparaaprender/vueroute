@@ -1,8 +1,11 @@
 <template>
 <div>
-  <div class="wrapper">
+	
+<div>
+<div class="wrapper">
     <form class="form-signin">       
-      <h2 class="form-signin-heading">Please login</h2>
+      <button class="btn btn-info btn-block" @click="Signup()">Signup</button>
+			<h2 class="form-signin-heading">Please login</h2>
       <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
       <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
       <label class="checkbox">
@@ -11,10 +14,12 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
     </form>
   </div>
+	</div>
+	
+	
 </div>
 </template>
-<style lang="scss">
-@import "bourbon";
+<style>
 
 body {
 	background: #eee !important;	
@@ -67,3 +72,8 @@ body {
 }
 
 </style>
+<script>
+export default{
+	
+}
+</script>
