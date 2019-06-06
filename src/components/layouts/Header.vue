@@ -10,6 +10,7 @@
             <router-link to='/login' tag="a" class="nav-item nav-link">Login</router-link>
             <router-link to='/signup' tag="a" class="nav-item nav-link">Signup</router-link>
             <router-link to='/tree' tag="a" class="nav-item nav-link">Tree</router-link>
+            <router-link to='/padre' tag="a" class="nav-item nav-link">Padre</router-link>
           </ul>
         </nav>
         <h3 class="text-muted">{{webtitle}}</h3>

@@ -6,7 +6,7 @@ import Contact from './components/Contact.vue';
 import Index from './components/Index.vue';
 import Signup from './components/auth/Signup.vue';
 import Tree from './components/Tree.vue';
-
+import Padre from './components/Padre.vue';
 const routes = [
     { path: '/', component: Index },
     { path: '/register', component: Register },
@@ -15,6 +15,7 @@ const routes = [
     { path: '/contact', component: Contact },
     { path: '/signup', component: Signup },
     { path: '/tree', component: Tree },
+    { path: '/padre', component: Padre },
 ];
 
 

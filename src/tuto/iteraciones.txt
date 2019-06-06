@@ -5,6 +5,10 @@ https://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/
 https://getbootstrap.com/docs/4.0/layout/grid/
 
 
+Comunicación bidireccional con Vue
+---------------------------------------
+https://tecnops.es/programacion-usando-vuejs-parte-6/
+
 Vue routes
 https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-routing-in-vuejs/
 
