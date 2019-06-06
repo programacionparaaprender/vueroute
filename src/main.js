@@ -7,7 +7,7 @@ import routes from './routes';
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
-
+Vue.use(VueTree);
 const router = new VueRouter({
     routes,
     mode: 'history'
@@ -15,5 +15,6 @@ const router = new VueRouter({
 //mode: 'history' se encarga de que ya no aparezca la almoadilla
 new Vue({
     router,
+    VueTree,
     render: h => h(App)
 }).$mount('#app');

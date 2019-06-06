@@ -82,6 +82,9 @@
         itemClick (node) {
           console.log(node.model.text + ' clicked !')
         }
+      },
+      components:{
+        VueTree
       }
     }
 
