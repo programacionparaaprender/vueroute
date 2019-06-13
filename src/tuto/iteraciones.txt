@@ -18,6 +18,10 @@ https://www.npmjs.com/package/vue-axios
 Tree
 https://github.com/zdy1988/vue-jstree
 
+Vuex Ejemplo
+https://vuex.vuejs.org/guide/actions.html
+
+
 vue init simple-webpack VueWebPack
 scss No
 Necesario para el Login.vue
@@ -26,3 +30,4 @@ npm install vue-router --save
 npm install --save axios vue-axios
 npm install --save axios vue-axios
 npm install --save vue-jstree
+npm install --save vuex
