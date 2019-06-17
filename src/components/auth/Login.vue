@@ -4,7 +4,7 @@
 <div>
 <div class="wrapper">
     <form class="form-signin">       
-      <button class="btn btn-info btn-block" @click="Signup()">Signup</button>
+      <button type="button" class="btn btn-info btn-block" @click="Signup()">Signup</button>
 			<h2 class="form-signin-heading">Please login</h2>
       <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
       <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
@@ -74,6 +74,15 @@ body {
 </style>
 <script>
 export default{
-	
+	data(){
+		return {
+
+		}
+	},
+	methods:{
+		Signup(){
+			this.$router.push("/signup");
+		}
+	}
 }
 </script>
