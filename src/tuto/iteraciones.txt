@@ -22,6 +22,17 @@ Vuex Ejemplo
 https://vuex.vuejs.org/guide/actions.html
 
 
+SQL server
+-----------
+https://www.npmjs.com/package/mssql
+https://www.youtube.com/watch?v=X84Lz5i_IRs
+
+falta al parecer el modulo 
+https://www.npmjs.com/package/tls
+instale también tedious
+ahora Module not found: Error: Can't resolve 'dgram' in
+
+
 vue init simple-webpack VueWebPack
 scss No
 Necesario para el Login.vue
@@ -31,3 +42,75 @@ npm install --save axios vue-axios
 npm install --save axios vue-axios
 npm install --save vue-jstree
 npm install --save vuex
+
+
+
+
+/*
+var Connection = require('tedious').Connection;
+var config = {
+    "server": "localhost\SQLEXPRESS",
+    "userName": "sa1",
+    "password": "123",
+    "options": {
+       //"instanceName": "Nombre de la instancia",
+       "database": "QuirkyBookProject",
+       "rowCollectionOnRequestCompletion": true,
+       "rowCollectionOnDone": true
+    }
+  };
+const SqlConnection = new Connection(config);
+
+//const SqlConnection = require("tedious").Connection;
+const Request = require("tedious").Request;
+
+function executeQuery(query) {
+        let resultEntity = {
+            result: {},
+            error: null
+        };
+
+        return new promise((resolve, reject) => {
+            var connection = new SqlConnection(this.config);
+
+            connection.on('connect', function (err) {
+                let request = new Request(query, function (err, rowCount, rows) {
+                    if (err) {
+                        resultEntity.error = err;
+                        reject(resultEntity);
+                    } else {
+                        resultEntity.result = rows;
+                        resolve(resultEntity);
+                    }
+
+                    connection.close();
+                });
+                connection.execSql(request);
+            }
+           );
+        });
+    }
+
+
+let jsonSql = require('json-sql');
+
+function createSelectQuery(filter, sort) {
+    let sql = jsonSql.build({
+       dialect: 'mssql',
+       type: 'select',
+       table: 'Books',
+       fields: ['Id', 'Name'],
+       condition: filter,
+       sort: sort
+    });
+  return sql;
+ }
+
+ let sql = jsonSql.build({
+    table: 'Books', 
+    condition: {Name: 'Spyder without duty'},
+    sort: {a: 1, b: -1}
+});
+
+sql.query = 'select * from "Books" WHERE Nombre = "Spyder without duty" order by "a" asc, "b" desc';
+*/

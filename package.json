@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "dgram": "^1.0.1",
+    "mssql": "^5.1.0",
+    "tedious": "^6.2.0",
+    "tls": "0.0.1",
     "vue": "^2.5.11",
     "vue-axios": "^2.1.4",
     "vue-jstree": "^2.1.6",

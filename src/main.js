@@ -1,3 +1,74 @@
+
+
+
+
+
+/*
+const sql = require('mssql');
+var config = {
+    server: "localhost\SQLEXPRESS",
+    database:"QuirkyBookProject",
+    userName: "sa1",
+    password: "123",
+    port:1433
+  }; 
+
+const sql = require('mssql')
+ 
+async () => {
+    try {
+        await sql.connect('mssql://username:password@localhost/database')
+        const result = await sql.query`select * from mytable where id = ${value}`
+        console.dir(result)
+    } catch (err) {
+        // ... error checks
+    }
+}
+
+  async () => {
+    try {
+        await sql.connect(config);//('mssql://sa1:123@localhost\SQLEXPRESS/QuirkyBookProject')
+        const result = await sql.query('select * from Books');// where id = ${value}');
+        console.dir(result);
+    } catch (err) {
+        // ... error checks
+    }
+}
+
+var sql = require('mssql');
+var config = {
+    server: "localhost\SQLEXPRESS",
+    database:"QuirkyBookProject",
+    userName: "sa1",
+    password: "123",
+    port:1433
+  };
+
+function getEmp()
+{
+    var conn = new sql.Connection(config);
+    var req = new sql.Request(conn);
+    config.connect(function(err){
+        if(err){
+            console.log(err);
+        }
+        req.query("select * from Books",function(err, recordser){
+            if(err){
+                console.log(err);
+            }else{
+                console.log(recordset);
+            }
+            conn.close();
+        })
+    });
+}
+getEmp();
+
+
+*/
+
+
+
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';

@@ -18,10 +18,12 @@ const routes = [
     { path: '/contact', component: Contact },
     { path: '/signup', component: Signup },
     { path: '/register-now', redirect:'/signup' },
-    { path: '/products', component: Products },
+    { path: '/products', component: Products,children:[
+        { path: ':id', component: Details,name:'product' },
+    ] },
     { path: '/404', component: Error },
     { path: '*', redirect:'/404' },
-    { path: '/product-detail/:id', component: Details,name:'product' },
+    /*{ path: '/products/product-detail/:id', component: Details,name:'product' },*/
     
     /*
     { path: '/tree', component: Tree },

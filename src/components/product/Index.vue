@@ -1,5 +1,6 @@
 <template>
 <div>
+    <router-view></router-view>           
     <div></div>
 	<div class="cover">
         <div  class="col-md-12">
