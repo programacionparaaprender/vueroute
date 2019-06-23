@@ -30,6 +30,11 @@ export default{
             id:this.$route.params.id
         }
     },
+    watch:{
+        '$route'(to, from){
+            this.id = to.params.id;
+        }
+    },
     mounted(){
         console.log(this.id);
     }

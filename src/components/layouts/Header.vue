@@ -9,6 +9,7 @@
             <router-link to='/contact' tag="a" class="nav-item nav-link">Contact</router-link>
             <router-link to='/login' tag="a" class="nav-item nav-link">Login</router-link>
             <router-link to='/products' tag="a" class="nav-item nav-link">Products</router-link>
+             <router-link to='/webcam' tag="a" class="nav-item nav-link">Webcam</router-link>
             <!--
               <router-link to='/signup' tag="a" class="nav-item nav-link">Signup</router-link>
             <router-link to='/tree' tag="a" class="nav-item nav-link">Tree</router-link>

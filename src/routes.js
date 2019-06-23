@@ -7,9 +7,16 @@ import Index from './components/Index.vue';
 import Signup from './components/auth/Signup.vue';
 import Tree from './components/Tree.vue';
 import Padre from './components/Padre.vue';
-import Products from './components/product/Index.vue';
-import Details from './components/product/Details.vue';
+//import Products from './components/product/Index.vue';
+//import Details from './components/product/Details.vue';
 import Error from './components/layouts/Error.vue';
+import Webcam from './components/extras/WebCam.vue';
+
+const Products = r => require.ensure([],()=>{  r(require('./components/product/Index.vue'))}, 'product')
+
+const Details = r =>require.ensure([],()=>{ r(require('./components/product/Details.vue'))}, 'product')
+
+
 const routes = [
     { path: '/', component: Index },
     { path: '/register', component: Register },
@@ -17,6 +24,7 @@ const routes = [
     { path: '/about', component: About },
     { path: '/contact', component: Contact },
     { path: '/signup', component: Signup },
+    { path: '/webcam', component: Webcam },
     { path: '/register-now', redirect:'/signup' },
     { path: '/products', component: Products,children:[
         { path: ':id', component: Details,name:'product' },

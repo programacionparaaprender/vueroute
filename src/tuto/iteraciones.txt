@@ -22,10 +22,16 @@ Vuex Ejemplo
 https://vuex.vuejs.org/guide/actions.html
 
 
+Web Cam
+-----------------
+https://x-team.com/blog/webcam-capture-vue/
+
+
 SQL server
 -----------
 https://www.npmjs.com/package/mssql
 https://www.youtube.com/watch?v=X84Lz5i_IRs
+
 
 falta al parecer el modulo 
 https://www.npmjs.com/package/tls

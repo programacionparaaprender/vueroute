@@ -69,6 +69,7 @@ getEmp();
 
 
 
+
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
@@ -80,6 +81,15 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(VueTree);
 const router = new VueRouter({
+    scrollBehavior(to, from, savedPosition){
+        //hace que la pantalla suba después de seleccionar
+        if(savedPosition){
+            return savedPosition;
+        }else{
+            return {x:0,y:0};
+        }
+        
+    },
     routes,
     mode: 'history'
     });
