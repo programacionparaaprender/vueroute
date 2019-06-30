@@ -7,45 +7,15 @@
             Products
         </div>
         <div class="row">
-<div class="col-md-3">
+        <div v-bind:key="product.title" class="col-md-3" v-for="(product,key) in products">
             <div class="col-md-12">
                 <img src="http://placehold.it/200x100/000" />
             </div>
             <div class="col-md-12">
-                <h4>Product title 1</h4>
-                <p>Product description</p>
-                <router-link :to="{name: 'product', params:{id:1}}" class="btn btn-success">Product 1</router-link>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="col-md-12">
-                <img src="http://placehold.it/200x100/000" />
-            </div>
-            <div class="col-md-12">
-                <h4>Product title 2</h4>
-                <p>Product description</p>
-                <router-link :to="{name: 'product', params:{id:2}}" class="btn btn-success">Product 2</router-link>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="col-md-12">
-                <img src="http://placehold.it/200x100/000" />
-            </div>
-            <div class="col-md-12">
-                <h4>Product title 3</h4>
-                <p>Product description</p>
-                <router-link :to="{name: 'product', params:{id:3}}" class="btn btn-success">Product 3</router-link>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="col-md-12">
-                <img src="http://placehold.it/200x100/000" />
-            </div>
-            <div class="col-md-12">
-                <h4>Product title 4</h4>
-                <p>Product description</p>
-                <router-link :to="{name: 'product', params:{id:4}}" class="btn btn-success">Product 4</router-link>
+                <h4>{{product.data.title}}</h4>
+                <p>{{product.data.description}}</p>
+                
+                <router-link :to="{name: 'product', params:{id:key}}" class="btn btn-success">View</router-link>
             </div>
         </div>
         </div>
@@ -54,21 +24,27 @@
 </div>
 </template>
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 export default{
-    created(){
-        axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
+    data(){
+        return{
+            products:[],
+        }
+    },
+    mounted()
+    {
+        /* axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
             console.log(response.data);
-            });
-
-        /* this.$http.get('https://jsonplaceholder.typicode.com/users').then(
+            }); */
+        this.$http.get('https://vue-http-6a741.firebaseio.com/products.json').then(
             response=>{
-                console.log(response.data);
+                this.products = response.data;
+                //console.log(this.products);
             }
         ).catch(e=>{
                 console.log(e);
-            }); */
-    }
+            });            
+         }
 }
 </script>
 <style>

@@ -106,6 +106,17 @@ const router = new VueRouter({
     mode: 'history'
     });
 //mode: 'history' se encarga de que ya no aparezca la almoadilla
+
+axios.interceptors.response.use(response=>{
+//console.log(response);
+     return response; 
+}, error=>{
+    //console.log(error.response);
+     if(error.response.status === 401){
+        router.push('/404');
+    } 
+});
+
 new Vue({
     router,
     'store': store,
