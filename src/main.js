@@ -69,20 +69,29 @@ getEmp();
 
 
 
-
+import Vuex from 'vuex';
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueTree from 'vue-jstree';
 import routes from './routes';
 import Axios from 'axios';
-//import store from './store.js';
+import state from './store.js';
+
+Vue.use(Vuex);
+const store = new Vuex.Store(state);
+
 Vue.config.productionTip = false;
 
-Vue.prototype.$http = Axios;
+//Vue.prototype.$http = Axios;
+
+import axios from 'axios';
+import VueAxios from 'vue-axios'; 
+Vue.use(VueAxios, axios);
 
 Vue.use(VueRouter);
 Vue.use(VueTree);
+
 const router = new VueRouter({
     scrollBehavior(to, from, savedPosition){
         //hace que la pantalla suba después de seleccionar
@@ -99,7 +108,7 @@ const router = new VueRouter({
 //mode: 'history' se encarga de que ya no aparezca la almoadilla
 new Vue({
     router,
-    //store,
+    'store': store,
     VueTree,
     render: h => h(App)
 }).$mount('#app');

@@ -45,6 +45,9 @@
 </div>
 </template>
 <script>
+var api = "http://www.programandoconrupert.com/ws/servicio-gatos.php";
+console.log('ejemplo home');
+
 import Banner from './Banner.vue';
 
 export default{
@@ -55,6 +58,25 @@ export default{
       return {
         website:'Ejemplo'
       };
+    },
+    mounted(){
+      this.boton();
+    },
+    methods:{
+        boton:function(){
+            /* Vue.axios.get(api).then((response) => {
+                var json = JSON.stringify(response.data);
+            console.log(json);
+            }) */
+            
+            this.axios.get(api).then((response) => {
+            console.log(response.data);
+            })
+            
+            this.$http.get(api).then((response) => {
+            console.log(response.data);
+            })
+        }
     }
 }
 </script>

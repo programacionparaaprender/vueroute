@@ -12,6 +12,8 @@ import Padre from './components/Padre.vue';
 import Error from './components/layouts/Error.vue';
 import Webcam from './components/extras/WebCam.vue';
 
+import Create from './components/product/Create.vue';
+
 const Products = r => require.ensure([],()=>{  r(require('./components/product/Index.vue'))}, 'product')
 
 const Details = r =>require.ensure([],()=>{ r(require('./components/product/Details.vue'))}, 'product')
@@ -27,6 +29,7 @@ const routes = [
     { path: '/webcam', component: Webcam },
     { path: '/register-now', redirect:'/signup' },
     { path: '/products', component: Products,children:[
+        { path: 'create', component: Create,name:'create-product' },
         { path: ':id', component: Details,name:'product' },
     ] },
     { path: '/404', component: Error },

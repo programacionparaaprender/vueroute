@@ -22,9 +22,11 @@
     </div>
 </template>
 <script>
+
 import Header from './components/layouts/Header.vue';
 import Footer from './components/layouts/Footer.vue';
 //import Contents from './components/Contents.vue';
+//import store from './store.js';
 
 export default{
     components:{
@@ -36,7 +38,13 @@ export default{
       return {
         website:'Ejemplo'
       };
-    }
+    },
+    mounted(){
+        this.$store.dispatch('INCREMENT');
+        console.log('contador');
+        console.log(this.$store.state.count);
+
+    },
 }
 </script>
 

@@ -54,15 +54,20 @@
 </div>
 </template>
 <script>
+import axios from 'axios';
 export default{
     created(){
-        this.$http.get('https://jsonplaceholder.typicode.com/users').then(
+        axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
+            console.log(response.data);
+            });
+
+        /* this.$http.get('https://jsonplaceholder.typicode.com/users').then(
             response=>{
                 console.log(response.data);
             }
         ).catch(e=>{
                 console.log(e);
-            });
+            }); */
     }
 }
 </script>
