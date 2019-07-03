@@ -89,6 +89,10 @@ export default{
         },
         status: function(){
             console.log('Status has changed');
+        },
+        "product.title"(newData, oldData){
+            console.log(newData);
+            console.log(oldData);
         }
     }
 }
