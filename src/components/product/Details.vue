@@ -37,12 +37,13 @@ export default{
         return{
             id:this.$route.params.id,
             product:[],
-            errors:[]
+            errors:[],
+            status:false
         }
     },
-    created()
-    {
-        this.$http.get('https://vue-http-6a741.firebaseio.com/products.json',{
+    methods:{
+        updateProduct(){
+            this.$http.get('https://vue-http-6a741.firebaseio.com/products.json',{
             params:{
                 data: this.id
             }
@@ -53,11 +54,18 @@ export default{
                 var data = response.data[this.id]['data'];
                 this.product = data;
                 //console.log(this.product);
+                this.status = true;
             }
         ).catch(e=>{
             this.errors = e.response.data;
                 //console.log(e);
-            });            
+            });         
+        }
+    },
+    created: function()
+    {
+        this.updateProduct();   
+            
         /* axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
             console.log(response.data);
             }); */
@@ -72,8 +80,15 @@ export default{
 
     },
     watch:{
+        //se activa cuando se da en el boton view de alguno de los productos
         '$route'(to, from){
             this.id = to.params.id;
+
+            this.updateProduct();
+
+        },
+        status: function(){
+            console.log('Status has changed');
         }
     }
 }
