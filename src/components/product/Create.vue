@@ -45,7 +45,8 @@
                  title: "",
                  description: "",
                  quantity: 0
-             }
+             },
+             status:false
          }
      },
      methods:{
@@ -60,6 +61,14 @@
         ).catch(e=>{
                 console.log(e);
             });;            
+         }
+     },
+     watch:{
+         '$data':{
+             handler(newVal, oldVal){
+                 console.log(newVal);
+                 console.log(oldVal);
+             },deep:true
          }
      }
  }

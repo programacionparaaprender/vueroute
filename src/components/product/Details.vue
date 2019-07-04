@@ -87,13 +87,19 @@ export default{
             this.updateProduct();
 
         },
-        status: function(){
+        '$data':{
+             handler(newVal, oldVal){
+                 console.log(newVal);
+                 console.log(oldVal);
+             },deep:true
+         },
+        /* status: function(){
             console.log('Status has changed');
         },
         "product.title"(newData, oldData){
             console.log(newData);
             console.log(oldData);
-        }
+        } */
     }
 }
 </script>
