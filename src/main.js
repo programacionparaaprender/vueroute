@@ -77,7 +77,7 @@ import VueTree from 'vue-jstree';
 import routes from './routes';
 import Axios from 'axios';
 import state from './store.js';
-
+import filter from './filters.js';
 Vue.use(Vuex);
 const store = new Vuex.Store(state);
 

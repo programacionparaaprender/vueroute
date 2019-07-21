@@ -20,10 +20,16 @@
                     <img src="http://placehold.it/200x100/000" />
                 </div>
                 <div class="col-md-12">
-                    <h4>{{product.title}}</h4>
-                    <p>{{product.description}}</p>
-                    <p><em>{{product.quantity}}</em></p> 
+                    <h4>{{product.title | uppercase}}</h4>
+                    <p>{{product.description | uppercase | readmore(10, '...')}}</p>
+                    <p><em>{{product.quantity | dollar}}</em></p> 
                     <a href="#" class="btn btn-success btn-sm"> ADD TO CART</a>
+                </div>
+                <div class="alert alert-info">
+                    <button class="btn btn-success" @click="like++">Like</button>
+                    <button class="btn btn-success" @click="dislike++">Dislike</button>
+                    <p>Like: {{likeValue}}</p>
+                    <p>Dislike: {{disLikeValue}}</p>
                 </div>
             </div>
         </div>
@@ -38,10 +44,33 @@ export default{
             id:this.$route.params.id,
             product:[],
             errors:[],
-            status:false
+            status:false,
+            like:0,
+            dislike:0
+        }
+    },
+    /* filters:{
+        uppercase(value){
+            return value.toUpperCase();
+        },
+        lowercase(value){
+            return value.toLowerCase();
+        },
+        dollar(value){
+            return '$'+value;
+        }
+    }, */
+    computed:{
+        //se deben utilizar sin parentesis para que funcionen en el computed
+        likeValue(){
+            return this.like;
+        },
+        disLikeValue(){
+            return this.dislike;
         }
     },
     methods:{
+        
         updateProduct(){
             this.$http.get('https://vue-http-6a741.firebaseio.com/products.json',{
             params:{

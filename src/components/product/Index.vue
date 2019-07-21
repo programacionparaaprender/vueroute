@@ -12,8 +12,8 @@
                 <img src="http://placehold.it/200x100/000" />
             </div>
             <div class="col-md-12">
-                <h4>{{product.data.title}}</h4>
-                <p>{{product.data.description}}</p>
+                <h4>{{product.data.title | uppercase}}</h4>
+                <p>{{product.data.description | lowercase}}</p>
                 
                 <router-link :to="{name: 'product', params:{id:key}}" class="btn btn-success">View</router-link>
             </div>

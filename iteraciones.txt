@@ -5,3 +5,17 @@ https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-r
 
 Vue Axios
 https://www.npmjs.com/package/vue-axios
+
+Deployment Vue cli
+--------------------
+https://cli.vuejs.org/guide/deployment.html#general-guidelines
+
+npm install -g @vue/cli
+vue create vueroute && cd vueroute
+npm install vue-router --save
+npm install -g serve
+# -s flag means serve it in Single-Page Application mode
+# which deals with the routing problem below
+npm run build
+serve -s dist
+

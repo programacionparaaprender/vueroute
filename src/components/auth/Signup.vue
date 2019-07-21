@@ -1,28 +1,52 @@
 <template>
 <div>
-	
+	<div></div>
+
+
 <div>
 <div class="wrapper">
-    <form class="form-signin">       
+    <form class="form-signin" @submit.prevent>       
       <h2 class="form-signin-heading">Please Signup</h2>
-      <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-      <label class="checkbox">
-        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-      </label>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
-    </form>
+      <label>Fullname</label>
+	  <input v-model="yourname" type="text" class="form-control" name="fullname" placeholder="Fullname" />
+      
+      <button class="btn btn-lg btn-primary btn-block" type="submit" @click="fullname = yourname">Signup</button>   
+	<p>{{ firstname }}</p>	
+	</form>
   </div>
 	</div>
 	
 	
 </div>
 </template>
+<script>
+export default{
+	data(){
+		return{
+			yourname:"",
+			firstname:"",
+			lastname:""
+		}
+	},
+	computed:{
+		fullname:{
+			get(){
+				return this.firstname + ' ' + this.lastname;
+			},
+			set(value){
+				var names = value.split(' ');
+				this.firstname = names[0];
+				this.lastname = names[1];
+			}
+		}
+	},
+	methods:{
+
+	}
+}
+</script>
 <style>
 
-body {
-	background: #eee !important;	
-}
 
 .wrapper {	
 	margin-top: 80px;
@@ -71,8 +95,3 @@ body {
 }
 
 </style>
-<script>
-export default{
-	
-}
-</script>
