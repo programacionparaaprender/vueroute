@@ -28,14 +28,15 @@ const routes = [
     { path: '/signup', component: Signup },
     { path: '/webcam', component: Webcam },
     { path: '/register-now', redirect:'/signup' },
-    { path: '/products', component: Products,children:[
+     { path: '/products', component: Products,children:[
         { path: 'create', component: Create,name:'create-product' },
         { path: ':id', component: Details,name:'product' },
-    ] },
+    ] }, 
     { path: '/404', component: Error },
     { path: '*', redirect:'/404' },
-    /*{ path: '/products/product-detail/:id', component: Details,name:'product' },*/
-    
+    /* { path: '/products/', component: Products },
+    { path: '/products/product-detail/:id', component: Details,name:'product' },
+     */
     /*
     { path: '/tree', component: Tree },
     { path: '/padre', component: Padre },

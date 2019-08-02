@@ -13,6 +13,13 @@ https://cli.vuejs.org/guide/deployment.html#general-guidelines
 npm install -g @vue/cli
 vue create vueroute && cd vueroute
 npm install vue-router --save
+
+npm install bootstrap --save
+npm install --save jquery popper.js
+
+Pendiente https://bootstrap-vue.js.org/docs/
+
+
 npm install -g serve
 # -s flag means serve it in Single-Page Application mode
 # which deals with the routing problem below

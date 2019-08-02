@@ -10,7 +10,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './public/js'),
+    path: path.resolve(__dirname, './dist2'),
+    publicPath: '/dist2/',
     filename: 'build.js'
   },
   module: {
