@@ -18,8 +18,10 @@ const Products = r => require.ensure([],()=>{  r(require('./components/product/I
 
 const Details = r =>require.ensure([],()=>{ r(require('./components/product/Details.vue'))}, 'product')
 
+import Vieja from './components/juegos/vieja/vieja.vue';
 
 const routes = [
+    { path: '/vieja', component: Vieja },
     { path: '/', component: Index },
     { path: '/register', component: Register },
     { path: '/login', component: Login },
@@ -28,15 +30,17 @@ const routes = [
     { path: '/signup', component: Signup },
     { path: '/webcam', component: Webcam },
     { path: '/register-now', redirect:'/signup' },
-     { path: '/products', component: Products,children:[
+    /*  { path: '/products', component: Products,children:[
         { path: 'create', component: Create,name:'create-product' },
         { path: ':id', component: Details,name:'product' },
-    ] }, 
+    ] },  */
     { path: '/404', component: Error },
     { path: '*', redirect:'/404' },
-    /* { path: '/products/', component: Products },
+     
+    { path: '/products/', component: Products },
+    { path: '/products/create', component: Create,name:'create-product' },
     { path: '/products/product-detail/:id', component: Details,name:'product' },
-     */
+     
     /*
     { path: '/tree', component: Tree },
     { path: '/padre', component: Padre },

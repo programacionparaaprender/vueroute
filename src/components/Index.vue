@@ -69,13 +69,13 @@ export default{
             console.log(json);
             }) */
             
-            this.axios.get(api).then((response) => {
+            /* this.axios.get(api).then((response) => {
             console.log(response.data);
             })
             
             this.$http.get(api).then((response) => {
             console.log(response.data);
-            })
+            }) */
         }
     }
 }

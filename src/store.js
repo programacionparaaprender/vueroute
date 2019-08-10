@@ -7,6 +7,7 @@ const state = {
     description:"",
     quantity:0
   },
+  squares: Array(9).fill(null),
   products:[]
 };
 
@@ -16,6 +17,13 @@ const mutations = {
   },
   increment (state, payload) {
     state.count++
+  },
+  setSquares (state, payload) {
+    state.squares = payload.squares
+    console.log(state.squares);
+  },
+  getSquares (state) {
+    return state.squares;
   }
 };
 
@@ -23,6 +31,12 @@ const actions = {
   INCREMENT:({commit}, payload)=>{
     commit('increment', payload);
   },
+  SETSQUARES:({commit}, payload)=>{
+    commit('setSquares', payload);
+  },
+  GETSQUARES:({commit}, payload)=>{
+    commit('getSquares', payload);
+  }
   /* increment (context) {
     context.commit('increment')
   },

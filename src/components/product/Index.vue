@@ -7,7 +7,7 @@
             Products
         </div>
         <div class="row">
-        <div v-bind:key="product.title" class="col-md-3" v-for="(product,key) in products">
+        <div v-bind:key="{id:key}" class="col-md-3" v-for="(product,key) in products">
             <div class="col-md-12">
                 <img src="http://placehold.it/200x100/000" />
             </div>

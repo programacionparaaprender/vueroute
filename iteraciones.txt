@@ -1,4 +1,45 @@
 
+Montar servicio en microsoft windows
+https://www.iis.net/downloads/microsoft/url-rewrite
+Application Request Routing Cache
+https://www.microsoft.com/en-us/download/details.aspx?id=47333
+https://www.linkedin.com/pulse/hosting-vue-js-spa-build-microsoft-iis-zainul-zain/
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="Handle History Mode and custom 404/500" stopProcessing="true">
+            <match url="(.*)" />
+            <conditions logicalGrouping="MatchAll">
+              <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+              <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+            </conditions>
+          <action type="Rewrite" url="index.html" />
+        </rule>
+      </rules>
+    </rewrite>
+      <httpErrors>     
+          <remove statusCode="404" subStatusCode="-1" />                
+          <remove statusCode="500" subStatusCode="-1" />
+          <error statusCode="404" path="/survey/notfound" responseMode="ExecuteURL" />                
+          <error statusCode="500" path="/survey/error" responseMode="ExecuteURL" />
+      </httpErrors>
+      <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+</configuration>
+
+Publicar en github pages
+https://www.youtube.com/watch?v=2aNiTrhKZjA
+
+cd dist
+git init
+git remote add deploy https://github.com/luis13711/minuto-javascript.git
+git add .
+git commit -m "Prueba"
+git push deploy master
 
 Vue Routes
 https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-routing-in-vuejs/
