@@ -67,3 +67,6 @@ npm install -g serve
 npm run build
 serve -s dist
 
+
+Pendiente time picker
+https://www.npmjs.com/package/vuejs-timepicker

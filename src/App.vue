@@ -27,6 +27,8 @@ import Header from './components/layouts/Header.vue';
 import Footer from './components/layouts/Footer.vue';
 //import Contents from './components/Contents.vue';
 //import store from './store.js';
+//import axios from 'axios';
+
 
 export default{
     components:{
@@ -43,7 +45,17 @@ export default{
         this.$store.dispatch('INCREMENT');
         console.log('contador');
         console.log(this.$store.state.count);
-
+        
+        this.$http.get('https://localhost:44314/api/values').then(
+            response=>{
+                console.log('cors asp.net');
+                const data = response.data;
+                console.log(data);
+            }
+        ).catch(e=>{
+                console.log(e);
+            });            
+         
     },
 }
 </script>
