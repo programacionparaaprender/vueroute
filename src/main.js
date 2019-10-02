@@ -10,6 +10,8 @@ import routes from './routes';
 import Axios from 'axios';
 import state from './store.js';
 import filter from './filters.js';
+import VueBootstrap from 'bootstrap-vue';
+
 Vue.use(Vuex);
 const store = new Vuex.Store(state);
 
@@ -23,6 +25,7 @@ Vue.use(VueAxios, axios);
 
 Vue.use(VueRouter);
 Vue.use(VueTree);
+Vue.use(VueBootstrap);
 
 const router = new VueRouter({
     scrollBehavior(to, from, savedPosition){

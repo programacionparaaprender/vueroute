@@ -21,8 +21,10 @@ const Details = r =>require.ensure([],()=>{ r(require('./components/product/Deta
 import Vieja from './components/juegos/vieja/vieja.vue';
 import Pong from './components/juegos/pong2/pong.vue';
 import Sheduler from './components/tablas/Sheduler.vue';
+import ProgressVar from './components/progress/ProgressVar.vue';
 
 const routes = [
+    { path: '/progress', component: ProgressVar },
     { path: '/pong', component: Pong },
     { path: '/vieja', component: Vieja },
     { path: '/', component: Index },

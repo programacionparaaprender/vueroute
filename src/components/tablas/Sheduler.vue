@@ -22,7 +22,7 @@
 <script src="variables.js"></script>
 <script>
 import Vue from 'vue';
-import TimePicker from 'vue-timepicker'
+import TimePicker from 'vuejs-timepicker'
 import {ServerTable, ClientTable, Event} from 'vue-tables-2';
 Vue.use(ClientTable);
 
@@ -115,6 +115,353 @@ export default{
                 pagination: { chunk:10, dropdown: false }
             }
         }
+    },
+    methods:{
+        agregarSheduler(h1, h2, color){
+            var r = {};
+            const hora1 = parseInt(h1.HH);
+            const minuto1 = parseInt(h1.mm);
+            const hora2 = parseInt(h2.HH);
+            const minuto2 = parseInt(h2.mm);
+            switch(hora1){
+                case 0:
+                    switch(hora2){
+                        case 0:
+                            this.asignador0(r, minuto1, minuto2);
+                            break;
+                        case 1:
+                            this.asignador1(r, minuto1, minuto2);
+                        case 2:
+                            this.asignador2(r, minuto1, minuto2);
+                            break;
+                        case 3:
+                            this.asignador3(r, minuto1, minuto2);
+                        case 4:
+                            this.asignador4(r, minuto1, minuto2);
+                        case 5:
+                            this.asignador5(r, minuto1, minuto2);
+                            break;
+                        case 6:
+                            this.asignador6(r, minuto1, minuto2);
+                            break;
+                        case 7:
+                            this.asignador7(r, minuto1, minuto2);
+                            break;
+                        case 8:
+                            this.asignador8(r, minuto1, minuto2);
+                            break;
+                        case 9:
+                            this.asignador9(r, minuto1, minuto2);
+                            break;
+                        case 10:
+                            break;
+                        case 11:
+                            break;
+                        case 12:
+                            break;
+                        case 13:
+                            break;
+                        case 14:
+                            break;
+                        case 15:
+                            break;
+                        case 16:
+                            break;
+                        case 17:
+                            break;
+                        case 18:
+                            break;
+                        case 19:
+                            break;
+                        case 20:
+                            break;
+                        case 21:
+                            break;
+                        case 22:
+                            break;
+                        case 23:
+                            break;                
+                    }
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    break;
+                case 12:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 15:
+                    break;
+                case 16:
+                    break;
+                case 17:
+                    break;
+                case 18:
+                    break;
+                case 19:
+                    break;
+                case 20:
+                    break;
+                case 21:
+                    break;
+                case 22:
+                    break;
+                case 23:
+                    break;                
+            }
+        },
+        asignador0(r, minuto1, minuto2){
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0000 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0000 = color;
+                r.p0030 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0030 = color;
+            }
+        },
+        asignador1(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0100 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0100 = color;
+                r.p0130 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0130 = color;
+            }
+        },
+        asignador2(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0200 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0200 = color;
+                r.p0230 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0230 = color;
+            }
+        },
+        asignador3(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0300 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0300 = color;
+                r.p0330 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0330 = color;
+            }
+        },
+        asignador4(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            r.p0300 = color;
+            r.p0330 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0400 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0400 = color;
+                r.p0430 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0430 = color;
+            }
+        },
+        asignador5(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            r.p0300 = color;
+            r.p0330 = color;
+            r.p0400 = color;
+            r.p0430 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0500 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0500 = color;
+                r.p0530 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0530 = color;
+            }
+        },
+        asignador6(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            r.p0300 = color;
+            r.p0330 = color;
+            r.p0400 = color;
+            r.p0430 = color;
+            r.p0500 = color;
+            r.p0530 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0600 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0600 = color;
+                r.p0630 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0630 = color;
+            }
+        },
+        asignador7(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            r.p0300 = color;
+            r.p0330 = color;
+            r.p0400 = color;
+            r.p0430 = color;
+            r.p0500 = color;
+            r.p0530 = color;
+            r.p0600 = color;
+            r.p0630 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0700 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0700 = color;
+                r.p0730 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0730 = color;
+            }
+        },
+        asignador8(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            r.p0300 = color;
+            r.p0330 = color;
+            r.p0400 = color;
+            r.p0430 = color;
+            r.p0500 = color;
+            r.p0530 = color;
+            r.p0600 = color;
+            r.p0630 = color;
+            r.p0700 = color;
+            r.p0730 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0800 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0800 = color;
+                r.p0830 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0830 = color;
+            }
+        },
+        asignador9(r, minuto1, minuto2){
+            r.p0000 = color;
+            r.p0030 = color;
+            r.p0100 = color;
+            r.p0130 = color;
+            r.p0200 = color;
+            r.p0230 = color;
+            r.p0300 = color;
+            r.p0330 = color;
+            r.p0400 = color;
+            r.p0430 = color;
+            r.p0500 = color;
+            r.p0530 = color;
+            r.p0600 = color;
+            r.p0630 = color;
+            r.p0700 = color;
+            r.p0730 = color;
+            r.p0800 = color;
+            r.p0830 = color;
+            const min1 = (minuto1 < 31) ? 0:30;
+            const min2 = (minuto2 < 31) ? 0:30;
+            if(min1 == 0 && min2 == 0){
+                r.p0900 = color;
+            }
+            if(min1 == 0 && min2 > 0){
+                r.p0900 = color;
+                r.p0930 = color;
+            }
+            if(min1 > 0 && min2 > 0){
+                r.p0930 = color;
+            }
+        }
+
     }
 }
   </script>
