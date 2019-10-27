@@ -4,7 +4,7 @@
               <a class="button" @click="searchInfoWikipedia()">
                 <font-awesome-icon icon="wifi" /> Evento llama a padre
               </a>
-
+<b-button variant="primary" @click="llamaPadre">llamapadre</b-button>
       </div>
 
 </template>
@@ -16,6 +16,9 @@
       }
     },
     methods: {
+      llamaPadre(){
+        this.$emit('evento_padre');
+      },
       searchInfoWikipedia() {
           var title = '';
         this.$emit('search-in-wikipedia', title);

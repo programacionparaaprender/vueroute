@@ -28,6 +28,7 @@
  * Importando un componente de forma local.
  * Solo lo usamos donde se importa
  */
+//import { bus } from "@/main";
 import FilmCard from './filmCard.vue'
 export default {
   components: {
@@ -40,6 +41,14 @@ export default {
         subtitle: 'The Open Movie & TV Show Database'
       }
     }
+  },
+  mounted(){
+    /* bus.on('evento_padre',function(){
+      alert('evento padre');
+    }); */
+    this.$on('evento_padre',function(){
+      alert('evento padre');
+    });
   },
   methods: {
     searchInfoWikipedia (title) {

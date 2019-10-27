@@ -70,3 +70,6 @@ serve -s dist
 
 Pendiente time picker
 https://www.npmjs.com/package/vuejs-timepicker
+
+Realizar un scroll con bootstrap-vue
+https://bootstrap-vue.js.org/docs/directives/scrollspy/

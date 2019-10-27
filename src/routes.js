@@ -22,8 +22,12 @@ import Vieja from './components/juegos/vieja/vieja.vue';
 import Pong from './components/juegos/pong2/pong.vue';
 import Sheduler from './components/tablas/Sheduler.vue';
 import ProgressVar from './components/progress/ProgressVar.vue';
-
+import ScrollspyMio from './components/bootstrapvue/ScrollspyMio.vue';
+import HorariosUsuario from './components/tablas/HorariosUsuario.vue';
+//import Padre from './components/Padre.vue';
 const routes = [
+    { path: '/padre', component: Padre},
+    { path: '/scrollpane', component: ScrollspyMio },
     { path: '/progress', component: ProgressVar },
     { path: '/pong', component: Pong },
     { path: '/vieja', component: Vieja },
@@ -34,6 +38,7 @@ const routes = [
     { path: '/contact', component: Contact },
     { path: '/signup', component: Signup },
     { path: '/webcam', component: Webcam },
+    { path: '/horariosusuario', component: HorariosUsuario },
     { path: '/register-now', redirect:'/signup' },
     /*  { path: '/products', component: Products,children:[
         { path: 'create', component: Create,name:'create-product' },
