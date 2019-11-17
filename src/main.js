@@ -37,7 +37,7 @@ const router = new VueRouter({
         }
         
     },
-    routes,
+    'routes': routes,
     mode: 'history'
     });
 //mode: 'history' se encarga de que ya no aparezca la almoadilla

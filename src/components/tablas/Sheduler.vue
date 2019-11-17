@@ -22,6 +22,16 @@
             @input="updateValue" />
             <b-button class="mt-3" block @click="$bvModal.hide('modal-1')">Close Me</b-button>
         </b-modal>
+        <b-button
+            variant="info"
+            @click="paginaAnterior">
+               Volver a página anterior 
+        </b-button>
+        <b-button
+            variant="warning"
+            @click="index">
+               Volver a index 
+        </b-button>
     </div>
 </template>
 <style>
@@ -35,6 +45,7 @@
 <script src="metodos.js"></script>
 <script src="variables.js"></script>
 <script>
+import BackMixin from 'vue-router-back-mixin';
 import { Photoshop } from 'vue-color'
 import Vue from 'vue';
 import TimePicker from 'vuejs-timepicker'
@@ -138,7 +149,14 @@ export default{
             id:0
         }
     },
+    mixins: [BackMixin],
     methods:{
+        paginaAnterior(){
+            this.backMixin_handleBack();
+        },
+        index(){
+            this.$router.push('/');
+        },
         updateValue(){
             const idnew = this.id;
             const color = this.colors.hex;
