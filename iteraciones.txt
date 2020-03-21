@@ -44,6 +44,7 @@ git commit -m "Prueba"
 git push deploy master
 
 Vue Routes
+npm install -g @vue/cli
 https://appdividend.com/2018/12/28/vue-router-tutorial-with-example-how-to-use-routing-in-vuejs/
 
 Vue Axios

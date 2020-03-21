@@ -24,8 +24,10 @@ import Sheduler from './components/tablas/Sheduler.vue';
 import ProgressVar from './components/progress/ProgressVar.vue';
 import ScrollspyMio from './components/bootstrapvue/ScrollspyMio.vue';
 import HorariosUsuario from './components/tablas/HorariosUsuario.vue';
+import EjemploWorker from './components/EjemploWorker.vue';
 //import Padre from './components/Padre.vue';
 const routes = [
+    { path: '/ejemploworker', component: EjemploWorker},
     { path: '/padre', component: Padre},
     { path: '/scrollpane', component: ScrollspyMio },
     { path: '/progress', component: ProgressVar },

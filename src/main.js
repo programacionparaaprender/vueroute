@@ -12,6 +12,9 @@ import state from './store.js';
 import filter from './filters.js';
 import VueBootstrap from 'bootstrap-vue';
 
+import VueWorker from 'vue-worker'
+Vue.use(VueWorker);
+
 Vue.use(Vuex);
 const store = new Vuex.Store(state);
 
