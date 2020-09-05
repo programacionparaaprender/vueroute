@@ -76,3 +76,5 @@ https://www.npmjs.com/package/vuejs-timepicker
 
 Realizar un scroll con bootstrap-vue
 https://bootstrap-vue.js.org/docs/directives/scrollspy/
+
+https://vuejs.org/v2/guide/computed.html#Computed-Setter
