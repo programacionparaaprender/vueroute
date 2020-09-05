@@ -11,7 +11,7 @@
             <router-link to='/contact' tag="a" class="nav-item nav-link">Contact</router-link>
             <router-link to='/login' tag="a" class="nav-item nav-link">Login</router-link>
             <router-link to='/products' tag="a" class="nav-item nav-link">Products</router-link>
-             <router-link to='/tablas/Sheduler' tag="a" class="nav-item nav-link">Sheduler</router-link>
+            <!--  <router-link to='/tablas/Sheduler' tag="a" class="nav-item nav-link">Sheduler</router-link> -->
              <router-link to='/vieja' tag="a" class="nav-item nav-link">Vieja</router-link>
             <!--
               <router-link to='/webcam' tag="a" class="nav-item nav-link">Webcam</router-link>
