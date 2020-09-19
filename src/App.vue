@@ -46,7 +46,7 @@ export default{
         console.log('contador');
         console.log(this.$store.state.count);
         
-        this.$http.get('https://localhost:44314/api/values').then(
+        /* this.$http.get('https://localhost:44314/api/values').then(
             response=>{
                 console.log('cors asp.net');
                 const data = response.data;
@@ -54,7 +54,7 @@ export default{
             }
         ).catch(e=>{
                 console.log(e);
-            });            
+            });      */       
          
     },
 }

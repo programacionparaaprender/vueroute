@@ -1,4 +1,11 @@
 
+------------
+Trabajar google maps con vuejs
+-------------------------------
+https://www.youtube.com/watch?v=KARBEHUyooM
+
+https://www.npmjs.com/package/vue-browser-geolocation
+
 
 
 Montar servicio en microsoft windows

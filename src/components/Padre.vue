@@ -5,6 +5,7 @@
       <div class="subtitle"></div>
     </header>
     <section class="container">
+
       <div class="box-result">
           <film-card 
         :data-film="dataFilm" 

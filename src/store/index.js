@@ -15,9 +15,9 @@ const mutations = {
   increment (state) {
     state.count++
   },
-  increment (state, payload) {
+  /* increment (state, payload) {
     state.count++
-  },
+  }, */
   setSquares (state, payload) {
     state.squares = payload.squares
     console.log(state.squares);

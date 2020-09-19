@@ -45,7 +45,7 @@
 </div>
 </template>
 <script>
-var api = "http://www.programandoconrupert.com/ws/servicio-gatos.php";
+//var api = "http://www.programandoconrupert.com/ws/servicio-gatos.php";
 console.log('ejemplo home');
 
 import Banner from './Banner.vue';

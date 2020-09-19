@@ -6,10 +6,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueTree from 'vue-jstree';
-import routes from './routes';
-import Axios from 'axios';
-import state from './store.js';
-import filter from './filters.js';
+import routes from './router/index';
+//import Axios from 'axios';
+import state from './store/index';
+//import filter from './filters.js';
 import VueBootstrap from 'bootstrap-vue';
 
 import VueWorker from 'vue-worker'
@@ -54,6 +54,16 @@ const router = new VueRouter({
         router.push('/paginavueroute/404');
     } 
 }); */
+
+import VueGeolocation from 'vue-browser-geolocation';
+Vue.use(VueGeolocation);
+
+import * as VueGoogleMaps from 'vue2-google-maps'
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyDZktO_JnnvrY4BnD2IyZo8PqNXiDTWP1w'
+    }
+});
 
 new Vue({
     router,

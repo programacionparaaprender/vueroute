@@ -5,6 +5,7 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <router-link to='/' tag="a" class="nav-item nav-link" exact>Home</router-link> 
+            <router-link to='/maps' tag="a" class="nav-item nav-link">Google Maps</router-link>
             <router-link to='/ejemploworker' tag="a" class="nav-item nav-link" exact>Worker</router-link>     
             <router-link to='/progress' tag="a" class="nav-item nav-link">Progress</router-link>       
             <router-link to='/about' tag="a" class="nav-item nav-link">About</router-link>
