@@ -4,6 +4,9 @@ Trabajar google maps con vuejs
 -------------------------------
 https://www.youtube.com/watch?v=KARBEHUyooM
 
+geocerca
+https://www.youtube.com/watch?v=yaujvK74c9Y&t=457s
+
 https://www.npmjs.com/package/vue-browser-geolocation
 
 

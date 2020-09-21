@@ -18,7 +18,7 @@ import Error from '@/components/layouts/Error.vue';
 
 const Details = r =>require.ensure([],()=>{ r(require('@/components/product/Details.vue'))}, 'product') */
 
-//import Vieja from '@/components/juegos/vieja/vieja.vue';
+import Vieja from '@/components/juegos/vieja/vieja.vue';
 import Pong from '@/components/juegos/pong2/pong.vue';
 import Sheduler from '@/components/tablas/Sheduler.vue';
 import ProgressVar from '@/components/progress/ProgressVar.vue';
@@ -34,7 +34,7 @@ const routes = [
     { path: '/scrollpane', component: ScrollspyMio },
     { path: '/progress', component: ProgressVar },
     { path: '/pong', component: Pong },
-    //{ path: '/vieja', component: Vieja },
+    { path: '/vieja', component: Vieja },
     { path: '/', component: Index },
     { path: '/register', component: Register },
     //{ path: '/login', component: Login },

@@ -1,7 +1,7 @@
 <template>
 <div>
 <footer class="footer">
-        <p>© Company 2017</p>
+        <p></p>
       </footer>
 </div>
 </template>
