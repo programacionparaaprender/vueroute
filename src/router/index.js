@@ -27,7 +27,10 @@ import HorariosUsuario from '@/components/tablas/HorariosUsuario.vue';
 //import EjemploWorker from '@/components/EjemploWorker.vue';
 import GoogleMap from '@/components/google/GoogleMap.vue';
 //import Padre from './components/Padre.vue';
+import EjemploStores from '@/components/ejemplostores/EjemploStores.vue';
+
 const routes = [
+    { path: '/ejemplostore', component: EjemploStores},
     { path: '/maps', component: GoogleMap},
     //{ path: '/ejemploworker', component: EjemploWorker},
     //{ path: '/padre', component: Padre},

@@ -2,6 +2,7 @@
 
 const state = {
   count: 0,
+  textos:[],
   product:{
     title:"",
     description:"",
@@ -15,9 +16,15 @@ const mutations = {
   increment (state) {
     state.count++
   },
-  /* increment (state, payload) {
-    state.count++
-  }, */
+  decrement (state) {
+    state.count--
+  },
+  borrarTextos(state) {
+    state.textos = [];
+  }, 
+  guardarTextos(state, payload) {
+    state.textos.push(payload.texto);
+  }, 
   setSquares (state, payload) {
     state.squares = payload.squares
     console.log(state.squares);
@@ -28,6 +35,15 @@ const mutations = {
 };
 
 const actions = {
+  BORRAR_TEXTOS:({commit}, payload)=>{
+    commit('borrarTextos', payload);
+  },
+  GUARDAR_TEXTOS:({commit}, payload)=>{
+    commit('guardarTextos', payload);
+  },
+  DECREMENT:({commit}, payload)=>{
+    commit('decrement', payload);
+  },
   INCREMENT:({commit}, payload)=>{
     commit('increment', payload);
   },
