@@ -29,9 +29,15 @@ import GoogleMap from '@/components/google/GoogleMap.vue';
 //import Padre from './components/Padre.vue';
 import EjemploStores from '@/components/ejemplostores/EjemploStores.vue';
 
+import Peticion from '@/views/prueba/Peticion.vue';
+
+import Geocerca from '@/components/google/GeoCerca.vue';
+
 const routes = [
+    { path: '/peticion', component: Peticion},
     { path: '/ejemplostore', component: EjemploStores},
     { path: '/maps', component: GoogleMap},
+    { path: '/geocerca', component: Geocerca},
     //{ path: '/ejemploworker', component: EjemploWorker},
     //{ path: '/padre', component: Padre},
     { path: '/scrollpane', component: ScrollspyMio },

@@ -1,4 +1,11 @@
 
+peticiones get usando fetch
+-------------------------
+get
+https://dev.to/shoupn/javascript-fetch-api-and-using-asyncawait-47mp
+post
+https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch
+
 ------------
 Trabajar google maps con vuejs
 -------------------------------

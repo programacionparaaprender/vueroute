@@ -5,6 +5,8 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <router-link to='/' tag="a" class="nav-item nav-link" exact>Home</router-link> 
+            <router-link to='/peticion' tag="a" class="nav-item nav-link">Petición</router-link>
+            <router-link to='/geocerca' tag="a" class="nav-item nav-link">Geocerca</router-link>
             <router-link to='/maps' tag="a" class="nav-item nav-link">Google Maps</router-link>
             <router-link to='/ejemplostore' tag="a" class="nav-item nav-link" exact>Ejemplo de store</router-link>
             <!-- <router-link to='/ejemploworker' tag="a" class="nav-item nav-link" exact>Worker</router-link>     

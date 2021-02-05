@@ -38,7 +38,7 @@ export default{
     },
     data(){
       return {
-        website:'Ejemplo'
+        website:''
       };
     },
     mounted(){
