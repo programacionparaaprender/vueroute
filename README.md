@@ -20,7 +20,7 @@ https://www.npmjs.com/package/vue-browser-geolocation
 
 
 
-Montar servicio en microsoft windows
+### Montar servicio en microsoft windows
 https://www.iis.net/downloads/microsoft/url-rewrite
 Application Request Routing Cache
 https://www.microsoft.com/en-us/download/details.aspx?id=47333
@@ -52,7 +52,7 @@ https://www.linkedin.com/pulse/hosting-vue-js-spa-build-microsoft-iis-zainul-zai
   </system.webServer>
 </configuration>
 
-Publicar en github pages
+### Publicar en github pages
 https://www.youtube.com/watch?v=2aNiTrhKZjA
 
 cd dist
