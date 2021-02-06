@@ -116,3 +116,6 @@ npm run lint
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### configurar publicado
+https://cli.vuejs.org/config/#publicpath
