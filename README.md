@@ -18,7 +18,8 @@ https://www.youtube.com/watch?v=yaujvK74c9Y&t=457s
 
 https://www.npmjs.com/package/vue-browser-geolocation
 
-
+### ejemplo de geocerca teoria
+https://developers.google.com/location-context/geofencing/
 
 ### Montar servicio en microsoft windows
 https://www.iis.net/downloads/microsoft/url-rewrite
@@ -61,6 +62,10 @@ git remote add deploy https://github.com/luis13711/minuto-javascript.git
 git add .
 git commit -m "Prueba"
 git push deploy master
+
+https://www.youtube.com/watch?v=6Xq0ALFs6Jw
+https://www.npmjs.com/package/vue-gh-pages
+npm install --save-dev vue-gh-pages
 
 Vue Routes
 npm install -g @vue/cli
