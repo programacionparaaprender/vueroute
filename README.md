@@ -65,7 +65,32 @@ git push deploy master
 
 https://www.youtube.com/watch?v=6Xq0ALFs6Jw
 https://www.npmjs.com/package/vue-gh-pages
+https://cli.vuejs.org/guide/deployment.html#github-pages
+
 npm install --save-dev vue-gh-pages
+
+package.json:
+"deploy": "node ./node_modules/vue-gh-pages/index.js"
+
+npm run deploy
+
+desde git batch
+
+chmod +x deploy.sh
+
+./deploy.sh
+
+si sale error
+https://docs.github.com/es/enterprise-server@2.19/github/authenticating-to-github/error-permission-denied-publickey
+https://www.youtube.com/watch?v=1Km-x_8DSpk
+hacer
+192.168.0.5 tenia esta ip
+
+ssh-keygen
+la-contraseña
+
+cat C:/Users/Bus209/.ssh/id_rsa.pub
+luego colocarla en setting ssh keys
 
 Vue Routes
 npm install -g @vue/cli

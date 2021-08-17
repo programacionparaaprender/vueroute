@@ -1,6 +1,15 @@
 <template>
     <div>
         <h1>This is about page</h1>
-        <p>Tittle description of about page</p>
+        <p>{{ message }}</p>
     </div>
-  </template>
+</template>
+<script>
+export default{
+    data(){
+      return {
+        message:'Tittle description of about page'
+      };
+    }
+}
+</script>

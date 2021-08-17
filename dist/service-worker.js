@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vueroute/precache-manifest.034f1b41785b3e385b9ea15d8c0bd807.js"
+  "/vueroute/precache-manifest.c8a3b6ad4cb64dd2d9a4e7da04b211a6.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "vueroute2"});
+workbox.core.setCacheNameDetails({prefix: "vueroute"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
